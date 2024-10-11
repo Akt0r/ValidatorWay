@@ -2,9 +2,9 @@ using System;
 
 namespace ValidatorWay;
 
-public struct PositiveInt
+public readonly struct PositiveInt
 {
-    public int Value { get; private set; }
+    public int Value { get; init; }
 
     public PositiveInt(int value)
     {
