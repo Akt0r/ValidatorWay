@@ -1,6 +1,4 @@
-using System;
-
-namespace ValidatorWay;
+namespace ModelApp;
 
 public class Baz
 {
