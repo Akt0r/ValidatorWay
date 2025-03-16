@@ -39,6 +39,11 @@ public class Converter
 
     public Result TryConvert<TRaw>(TRaw raw, Type target)
     {
+        if(typeof(TRaw) == target)
+        {
+            return new Result.Success(raw);
+        }
+        
         if (!_converters.TryGetValue((typeof(TRaw), target), out Delegate? converter))
         {
             var nullableTarget = IsNullable(target)
